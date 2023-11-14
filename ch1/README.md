@@ -51,3 +51,7 @@ for condition {}
 
 ### fetch
 1. [ReadAll和Copy的区别](https://juejin.cn/spost/7300812626278563859)
+2. `goroutine`是一个并发执行函数。
+3. 通道是一种允许某一例程向另一例程传递指定类型的值的通信机制。
+4. main 函数在一个 goroutine 中执行，go语句可以创建额外的 goroutine
+5. 当一个 goroutine 试图在一个通道上进行发送或接收操作时，它会阻塞，直到另一个 goroutine 试图进行接收或发送操作才传递值
