@@ -11,4 +11,16 @@ f, err := os.Create(file) // 编译错误，没有新变量声明
 
 1. 变量是存储值的地方，指针的值是一个变量的地址。不是所有的值都有地址，但是所有的变量都有地址
 2. 指针是可比较的，两个指针当且仅当指向同一个变量或者两者都是nil的情况下才相等
-3. 
+3. 使用 new() 函数创建的变量和取其地址的普通局部变量没什么不同
+```Go
+package main
+
+func newInt1() *int {
+    var dummy int
+	return &dummy
+}
+
+func newInt() *int {
+    return new(int)
+}
+```
